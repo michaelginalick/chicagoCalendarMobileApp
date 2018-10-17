@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native';
 import Calendar from './src/calendar/Calendar';
-// import type Moment from 'moment';
+import type Moment from 'moment';
 
 export default class App extends React.Component {
 
@@ -19,7 +19,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <StatusBar hidden={true} />
-        <Calendar onSelectDate={this.onSelectDate} />
+        <Calendar showDaysAfterCurrent={30} onSelectDate={this.onSelectDate} />
       </View>
     );
   }
